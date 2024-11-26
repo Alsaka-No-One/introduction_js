@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu de Devinettes et Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    .question-card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 500px;
+    }
+    .hidden {
+      display: none;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .feedback {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .correct {
+      color: green;
+    }
+    .wrong {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Jeu de Devinettes et Quiz</h1>
+  <div id="question-container" class="question-card">
+    <p id="question-text"></p>
+    <ul id="answer-options"></ul>
+    <button id="submit-answer" class="hidden">Valider</button>
+    <p id="feedback" class="feedback hidden"></p>
+  </div>
+  <button id="next-question">Question Suivante</button>
+  <form id="add-question-form" style="margin-top: 20px;">
+    <input type="text" id="new-question" placeholder="Nouvelle question" required>
+    <input type="text" id="new-correct-answer" placeholder="Bonne réponse" required>
+    <input type="text" id="new-incorrect-answers" placeholder="Réponses incorrectes (séparées par des virgules)" required>
+    <button type="submit">Ajouter une question</button>
+  </form>
+  
+  <script src="app.js"></script>
+</body>
+</html>
